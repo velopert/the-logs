@@ -1,9 +1,3 @@
-import App from './App/App';
-import List from './List/List';
-import Read from './Read/Read';
-import Write from './Write/Write';
+import Header from './Header/Header';
 
-
-
-export { App, List, Read, Write };
-
+export { Header };

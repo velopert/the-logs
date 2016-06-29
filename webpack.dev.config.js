@@ -21,7 +21,24 @@ module.exports = {
         contentBase: './public',
         proxy: {
             "*": "http://localhost:12001"
+        },
+
+        // It suppress error shown in console, so it has to be set to false.
+        quiet: false,
+        // It suppress everything except error, so it has to be set to false as well
+        // to see success build.
+        noInfo: false,
+        stats: {
+            // Config for minimal console.log mess.
+            assets: false,
+            colors: true,
+            version: false,
+            hash: false,
+            timings: false,
+            chunks: false,
+            chunkModules: false
         }
+
     },
 
     plugins: [
@@ -39,7 +56,13 @@ module.exports = {
                     presets: ['es2015', 'react']
                 })],
                 exclude: /node_modules/,
+            },
+            {
+              test: /\.css$/,
+              loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
             }
         ]
     }
+
+
 };

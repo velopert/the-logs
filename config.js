@@ -6,5 +6,5 @@ module.exports = {
     rootDir: __dirname,
     port: process.env.PORT || 3000,
     devPort: process.env.DEVPORT || 3001,
-    mongodbUri: process.env.MONGODB_URI,
+    mongodbUri: process.env.MONGODB_URI
 };
